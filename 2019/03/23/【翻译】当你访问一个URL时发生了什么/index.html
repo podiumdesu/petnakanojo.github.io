@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Weihong Wang">
+    
+    <title>
+        
+            【翻译】当你访问一个URL的时候到底发生了什么 |
+        
+        Welcome
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.ico","avatar":"/images/avatar.png","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Eat with my left hand.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":false,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.5.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Welcome
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【翻译】当你访问一个URL的时候到底发生了什么</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Weihong Wang</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2019-03-23 21:56:30</span>
+        <!-- <span class="mobile">2019-03-23 21:56</span> -->
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-05-19 18:51:10</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Network/">Network</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Network/">Network</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/notes/">notes</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/translation/">translation</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>12 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                <p>大体讲述了「当你访问一个URL的时候到底发生了什么」。这篇博客仅仅提供了一个大局观，在输入URL到获得页面中间还有很多未提到的细节，可以自己再查阅资料。我觉得原文写得蛮不错的，所以就翻译过来啦。</p>
+<span id="more"></span> 
+
+<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a class="link"   target="_blank" rel="noopener" href="http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url/" >What really happens when you navigate to a URL<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="当你访问一个URL的时候到底发生了什么"><a href="#当你访问一个URL的时候到底发生了什么" class="headerlink" title="当你访问一个URL的时候到底发生了什么"></a>当你访问一个URL的时候到底发生了什么</h2><p>作为一个软件开发者，你应该对于web应用程序到底是怎么工作的，以及这中间包含着什么样的技术有着非常清晰的理解🤔️：浏览器、HTTP、HTML、web服务器、请求处理等等。</p>
+<h3 id="1-当你在浏览器中输入一个URL"><a href="#1-当你在浏览器中输入一个URL" class="headerlink" title="1. 当你在浏览器中输入一个URL"></a>1. 当你在浏览器中输入一个URL</h3><p>一切都是源于这里：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwpfu4v6j20go038glw.jpg" alt="image-20190323162354836"></p>
+<h3 id="2-浏览器会寻找这个域名的IP地址"><a href="#2-浏览器会寻找这个域名的IP地址" class="headerlink" title="2. 浏览器会寻找这个域名的IP地址"></a>2. 浏览器会寻找这个域名的IP地址</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwph6aapj20cn031glj.jpg" alt="image-20190323162439306"></p>
+<p>在这段网上冲浪的过程中，第一步就是需要找到想要访问的域名的<code>ip地址</code>。DNS的查询是这样的：</p>
+<ul>
+<li><p><strong>浏览器缓存</strong> — 浏览器会缓存DNS记录一段时间。有趣的是，操作系统没有告知浏览器每条DNS记录的<code>time-to-live</code>，因此浏览器会以一个固定的时间长度来缓存这些DNS记录（每个浏览器之间不同，一般是2-30分钟）</p>
+</li>
+<li><p><strong>操作系统缓存</strong>  — 如果浏览器缓存没有找到，那么浏览器会调用系统查询。（Windows中是<code>gethostbyname</code>）。操作系统有他自己的缓存。</p>
+<blockquote>
+<p>译者注：应该就是所谓的硬盘缓存。</p>
+</blockquote>
+</li>
+<li><p><strong>路由器缓存</strong> — 这个查询会继续到你的路由器上，它也有自己的DNS缓存哦😯</p>
+</li>
+<li><p><strong>ISP DNS缓存</strong> — 下一个要查询的就是服务提供商（电信网、移动网等）的DNS服务器。</p>
+</li>
+<li><p><strong>递归搜索</strong> —  您的ISP的DNS服务器开始递归搜索，从根域名服务器，通过.com顶级域名服务器，到Facebook的名称服务器。通常，DNS服务器（ISP的）将在缓存中具有.com名称服务器的名称，因此不需要命中根名称服务器。</p>
+</li>
+</ul>
+<p>这是一张递归搜索的示意图。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwpil5soj20jz05a3ys.jpg" alt="image-20190323163332014"></p>
+<blockquote>
+<p> 译者注：如果所有缓存都没有命中，就会去查找根服务器，如果域名是.org，就会从根域名服务器拿到org顶级域名服务器的ip地址；然后去org顶级域名服务器那里去询问wikipedia.org服务器的位置，拿到ip地址之后再去找wikipedia.org服务器，得到最终的ip地址。</p>
+</blockquote>
+<p>关于DNS的一个令人担忧的事情是像wikipedia.org或facebook.com这样的整个域似乎映射到单个IP地址。幸运的是，有一些方法可以缓解瓶颈：</p>
+<ul>
+<li><p><strong>循环DNS</strong> 是一种解决方案，其中DNS查找返回多个IP地址，而不仅仅是一个。例如，facebook.com实际上映射到四个IP地址。</p>
+</li>
+<li><p>__负载均衡器 __是侦听特定IP地址并将请求转发到其他服务器的硬件。主要站点通常使用昂贵的高性能负载平衡器。</p>
+</li>
+<li><p><strong>地理DNS</strong> 通过将域名映射到不同的IP地址来提高可扩展性，具体取决于客户端的地理位置。这非常适合托管静态内容，以便不同的服务器不必更新共享状态。</p>
+</li>
+<li><p><strong>Anycast</strong> 是一种路由技术，其中单个IP地址映射到多个物理服务器。不幸的是，anycast不适合TCP，在这种情况下很少使用。</p>
+</li>
+</ul>
+<p>大多数DNS服务器本身使用anycast来实现DNS查找的高可用性和低延迟。</p>
+<h3 id="3-浏览器向web服务器发送HTTP请求"><a href="#3-浏览器向web服务器发送HTTP请求" class="headerlink" title="3. 浏览器向web服务器发送HTTP请求"></a>3. 浏览器向web服务器发送HTTP请求</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwpm90ogj20de02zq2t.jpg" alt="image-20190323171533154"></p>
+<p>Facebook的首页不可能从浏览器缓存中读取出来，因为动态网页会很快就过期或者立刻就过期（通过将expiry date设为过去的日期）</p>
+<p>所以浏览器需要向Facebook服务器发送以下的报文请求：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwpri6o1j20lo03rjrt.jpg" alt="image-20190323171951438"></p>
+<p>这个<code>GET</code>请求指明了要获取的URL：<code>http://facebook.com</code>。浏览器标识自己（<code>User-Agent</code>标识头），并说明它将接受哪些类型的响应（<code>Accept</code>和<code>Accept-Encoding</code>标识头）。<code>Connection</code>标头要求服务器保持TCP连接打开以进一步请求。</p>
+<p>该请求还包含浏览器为此域提供的cookie。您可能已经知道，Cookie是键值对，用于跟踪不同页面请求之间的网站状态。因此，cookie存储登录用户的名称，服务器分配给用户的密码，用户的一些设置等。这些cookie将存储在客户端的文本文件中，并发送到每个请求的服务器。</p>
+<blockquote>
+<p>有很多工具可以让您来查看原是的HTTP请求和响应。我最喜欢的查看网页流量的工具是<a class="link"   target="_blank" rel="noopener" href="http://www.fiddler2.com/fiddler2/" >fiddler<i class="fas fa-external-link-alt"></i></a>，但还有很多其他的工具（例如FireBug）。这些工具在你优化网页的时候会非常有帮助。</p>
+</blockquote>
+<blockquote>
+<p>除了GET请求，你应该也非常熟悉另一种POST请求，它通常用来提交表单。一个GET请求通过URL（例如<a class="link"   target="_blank" rel="noopener" href="http://robozzle.com/puzzle.aspx**?id=85**%EF%BC%89%E6%9D%A5%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E3%80%82%E8%80%8CPOST%E8%AF%B7%E6%B1%82%E9%80%9A%E8%BF%87%E8%AF%B7%E6%B1%82%E4%BD%93%E6%9D%A5%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E3%80%82" >http://robozzle.com/puzzle.aspx**?id=85**）来传递参数。而POST请求通过请求体来传递参数。<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<blockquote>
+<p> URL“<a class="link"   target="_blank" rel="noopener" href="http://facebook.com/%E2%80%9D" >http://facebook.com/”<i class="fas fa-external-link-alt"></i></a> 中的尾部斜杠非常重要。在这种情况下，浏览器可以安全地添加斜杠。对于”<a href="http://example.com/folderOrFile&quot;%E8%BF%99%E7%A7%8D%E7%BD%91%E5%9D%80%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E8%83%BD%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%9C%E6%9D%A0%EF%BC%8C%E5%9B%A0%E4%B8%BA%60folderOrFile%60%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%98%AF%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%88%96%E8%80%85%E6%98%AF%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E3%80%82%E5%9C%A8%E8%BF%99%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B0%86%E8%AE%BF%E9%97%AE%E6%B2%A1%E6%9C%89%E6%96%9C%E6%9D%A0%E7%9A%84URL%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B0%86%E5%93%8D%E5%BA%94%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%8C%E4%BB%8E%E8%80%8C%E5%AF%BC%E8%87%B4%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E5%BE%80%E8%BF%94%E3%80%82">http://example.com/folderOrFile&quot;这种网址，浏览器不能自动添加一个斜杠，因为`folderOrFile`不确定是一个文件夹或者是一个文件。在这种情况下，浏览器将访问没有斜杠的URL，服务器将响应重定向，从而导致不必要的往返。</a></p>
+</blockquote>
+<h3 id="4-Facebook服务器返回了一个永久重定向（301）的响应"><a href="#4-Facebook服务器返回了一个永久重定向（301）的响应" class="headerlink" title="4. Facebook服务器返回了一个永久重定向（301）的响应"></a>4. Facebook服务器返回了一个永久重定向（301）的响应</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwpx3rypj20h902s3ye.jpg" alt="image-20190323173124807"></p>
+<p>这是facebook服务器返回给浏览器请求的响应。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwq1tqb3j20jl06i3za.jpg" alt="image-20190323173155139"></p>
+<p>服务器给出了一个<code>301 Moved Permanently</code>的响应来告知浏览器去访问<code>http://www.facebook.com</code>而不是<code>http://facebook.com/</code>。</p>
+<blockquote>
+<p>为什么浏览器坚持要给出一个重定向而不是直接返回用户想要看到的web页面呢？这中间有非常有趣的原因。</p>
+<p>一个原因与__搜索引擎排名__有关。假设如果现在有两条URL指向一个页面（例如<a class="link"   target="_blank" rel="noopener" href="http://www.igoro.com/%E5%92%8Chttp://igoro.com/%EF%BC%8C%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%9A%E5%B0%86%E5%AE%83%E4%BB%AC%E8%AE%A4%E5%81%9A%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E7%BD%91%E9%A1%B5%EF%BC%8C%E6%AF%8F%E4%B8%AA%E9%83%BD%E4%BC%9A%E6%9C%89%E8%BE%83%E5%B0%91%E7%9A%84%E4%BC%A0%E5%85%A5%E9%93%BE%E6%8E%A5%EF%BC%8C%E5%9B%A0%E6%AD%A4%E6%8E%92%E5%90%8D%E9%83%BD%E4%BC%9A%E8%BE%83%E4%BD%8E%E3%80%82%E4%BD%86%E6%98%AF%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%83%BD%E7%90%86%E8%A7%A3%E6%B0%B8%E4%B9%85%E6%80%A7%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88301%EF%BC%89%EF%BC%8C%E8%BF%99%E6%A0%B7%E5%AE%83%E5%B0%B1%E4%BC%9A%E6%8A%8A%E6%9D%A5%E8%87%AA%E4%B8%A4%E4%B8%AA%E6%BA%90%E7%9A%84%E4%BC%A0%E5%85%A5%E9%93%BE%E6%8E%A5%E7%BB%84%E5%90%88%E6%88%90%E5%8D%95%E4%B8%AA%E6%8E%92%E5%90%8D%E3%80%82" >http://www.igoro.com/和http://igoro.com/，搜索引擎会将它们认做两个不同的网页，每个都会有较少的传入链接，因此排名都会较低。但是搜索引擎能理解永久性重定向（301），这样它就会把来自两个源的传入链接组合成单个排名。<i class="fas fa-external-link-alt"></i></a></p>
+<p>同时，相同内容的不同URL不是__缓存友好__的。当一段内容具有多个名称时，它可能会在缓存中多次出现。</p>
+</blockquote>
+<h3 id="5-浏览器遵循重定向"><a href="#5-浏览器遵循重定向" class="headerlink" title="5. 浏览器遵循重定向"></a>5. 浏览器遵循重定向</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqb5arkj20f40303ye.jpg" alt="image-20190323174526175"></p>
+<p>此时浏览器知道了<code>http://www.facebook.com</code>是要访问的正确URL。所以它会再次发出另一个GET请求。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqdzjayj20m104hgm3.jpg" alt="image-20190323174608992"></p>
+<p>请求头的含义与第一次请求是一样的。</p>
+<h3 id="6-服务器“处理”请求"><a href="#6-服务器“处理”请求" class="headerlink" title="6. 服务器“处理”请求"></a>6. 服务器“处理”请求</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqhl4pwj20hg0323yb.jpg" alt="image-20190323174840116"></p>
+<p>服务器收到GET请求的时候会处理它，并返回一个响应。</p>
+<p>这似乎是一项简单的任务，但实际上这里发生了许多有趣的事情 - 即使是在像我的博客这样简单的网站上，更不用说在像facebook这样的大规模可扩展的网站上。</p>
+<ul>
+<li><p><strong>web服务器软件</strong></p>
+<p>web服务器软件（例如<code>ISS</code>或者<code>Apache</code>）接收HTTP请求并决定应该执行哪个请求处理程序来处理该请求。请求处理程序是一个程序（在<code>ASP.NET</code>，<code>PHP</code>，<code>Ruby</code>…中），它读取请求并生成响应的HTML。在最简单的情况下，请求处理程序可以存储在文件层次结构中，其结构镜像URL结构。因此例如<a href="http://example.com/folder1/page1.aspx">http://example.com/folder1/page1.aspx</a> URL将映射到文件&#x2F; httpdocs &#x2F; folder1 &#x2F; page1的.aspx。还可以配置Web服务器软件，以便将URL手动映射到请求处理程序，因此page1.aspx的公共URL可以是<a href="http://example.com/folder1/page1%E3%80%82">http://example.com/folder1/page1。</a></p>
+</li>
+<li><p>请求处理</p>
+<p>请求处理程序读取请求，参数和cookie。它将读取并可能更新存储在服务器上的一些数据。然后，请求处理程序将生成HTML响应。</p>
+</li>
+</ul>
+<blockquote>
+<p>每个动态网页都会遇到的有趣困难时如何存储数据。小一点的网站一般会有一个独立的SQL数据库来存储数据，但是如果是存储了大量数据或者有很多访客的网站必须找到一种在多台机器上拆分数据库的方法。解决方案包括分片（基于主键在多个数据库中拆分表），复制和使用具有弱化一致性语义的简化数据库。</p>
+</blockquote>
+<blockquote>
+<p>保持数据更新便宜的一种技术是将一些工作推迟到批处理作业。例如，Facebook必须及时更新新闻源，但支持“你可能知道的人”功能的数据可能只需要每晚更新（我猜，我实际上并不知道他们如何实现这个功能）。批处理作业更新导致一些不太重要的数据过时，但可以使数据更新更快更简单。</p>
+</blockquote>
+<h3 id="7-服务器返回一个HTML响应"><a href="#7-服务器返回一个HTML响应" class="headerlink" title="7. 服务器返回一个HTML响应"></a>7. 服务器返回一个HTML响应</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqlx4lwj20rg02odfq.jpg" alt="image-20190323205521637"></p>
+<p>以下是服务器生成并发送回来的响应：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqordduj20p306mmxy.jpg" alt="image-20190323205553332"></p>
+<p>整个响应是36 kB，其中大部分是在我修剪的结尾处的字节二进制对象中。</p>
+<p><code>Content-Encoding</code>响应头告诉浏览器响应体使用gzip算法压缩。当解压缩这个二进制对象，你会得到你期待的HTML！😊</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqtvznnj20pb04owf1.jpg" alt="image-20190323205814996"></p>
+<p>除了压缩以外，标识头还指定是否以及如何缓存页面，是否要设置cookie（此响应中没有），隐私信息等等。</p>
+<blockquote>
+<p>请注意将Content-Type设置为text &#x2F; html的标头。标题指示浏览器将响应内容呈现为HTML，而不是将其作为文件下载。浏览器将使用标头来决定如何解释响应，但也会考虑其他因素，例如URL的扩展名。</p>
+</blockquote>
+<h3 id="8-浏览器开始渲染HTML"><a href="#8-浏览器开始渲染HTML" class="headerlink" title="8. 浏览器开始渲染HTML"></a>8. 浏览器开始渲染HTML</h3><p>甚至在浏览器收到整个HTML文档之前，它就开始渲染网站了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwqyk1syj20g504i3ym.jpg" alt="image-20190323212621486"></p>
+<h3 id="9-浏览器发送对HTML中嵌入的对象的请求"><a href="#9-浏览器发送对HTML中嵌入的对象的请求" class="headerlink" title="9. 浏览器发送对HTML中嵌入的对象的请求"></a>9. 浏览器发送对HTML中嵌入的对象的请求</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwr38qe0j20hi03xq2v.jpg" alt="image-20190323212846488"></p>
+<p>当浏览器呈现HTML时，它会注意到需要获取其他URL的标记。浏览器将发送GET请求以检索每个文件。</p>
+<p>以下是我访问facebook.com时检索到的一些网址：</p>
+<ul>
+<li><strong>Images</strong><a class="link"   target="_blank" rel="noopener" href="http://static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif" >http://static.ak.fbcdn.net/rsrc.php/z12E0/hash/8q2anwu7.gif<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="http://static.ak.fbcdn.net/rsrc.php/zBS5C/hash/7hwy7at6.gif" >http://static.ak.fbcdn.net/rsrc.php/zBS5C/hash/7hwy7at6.gif<i class="fas fa-external-link-alt"></i></a><br>…</li>
+<li><strong>CSS style sheets</strong><a class="link"   target="_blank" rel="noopener" href="http://static.ak.fbcdn.net/rsrc.php/z448Z/hash/2plh8s4n.css" >http://static.ak.fbcdn.net/rsrc.php/z448Z/hash/2plh8s4n.css<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="http://static.ak.fbcdn.net/rsrc.php/zANE1/hash/cvtutcee.css" >http://static.ak.fbcdn.net/rsrc.php/zANE1/hash/cvtutcee.css<i class="fas fa-external-link-alt"></i></a><br>…</li>
+<li><strong>JavaScript files</strong><br><a class="link"   target="_blank" rel="noopener" href="http://static.ak.fbcdn.net/rsrc.php/zEMOA/hash/c8yzb6ub.js" >http://static.ak.fbcdn.net/rsrc.php/zEMOA/hash/c8yzb6ub.js<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="http://static.ak.fbcdn.net/rsrc.php/z6R9L/hash/cq2lgbs8.js" >http://static.ak.fbcdn.net/rsrc.php/z6R9L/hash/cq2lgbs8.js<i class="fas fa-external-link-alt"></i></a><br>…</li>
+</ul>
+<p>这些URL每个都将经历与HTML页面类似的过程。因此，浏览器将在DNS中查找域名，向URL发送请求，遵循重定向等。</p>
+<p>但是，静态文件（与动态网页不同）允许浏览器缓存他们。某些文件可以直接从缓存中提供，而根本不联系服务器。浏览器知道缓存特定文件的时间长度，因此返回文件的响应包含Expires头（译者注：目前与缓存有关的响应头有：Expires、Cache-control、Last-Modified   &#x2F;  If-Modified-Since、Etag &#x2F; If-None-Match）此外，每个响应还可能包含一个类似于版本号的<code>ETag</code>标识头，如果浏览器看到它已经拥有的文件版本的<code>ETag</code>，它可以立即停止传输。</p>
+<blockquote>
+<p>你能猜出URL中的“fbcdn.net”代表什么吗？一个安全的猜测是它意味着“Facebook内容分发网络”。 Facebook使用内容分发网络（CDN）来分发静态内容 - 图像，样式表和JavaScript文件。因此，这些文件将被复制到全球的许多机器上。</p>
+<p>静态内容通常代表站点的大部分带宽，并且可以通过CDN轻松复制。通常，站点将使用第三方CDN提供商，而不是自己运行CDN。例如，Facebook的静态文件由最大的CDN提供商Akamai托管。</p>
+<p>作为演示，当您尝试ping static.ak.fbcdn.net时，您将收到来自akamai.net服务器的响应。另外，有趣的是，如果您多次ping URL，可能会收到来自不同服务器的响应，这表明在幕后发生的负载平衡。</p>
+</blockquote>
+<h3 id="10-浏览器发送进一步的异步（AJAX）请求"><a href="#10-浏览器发送进一步的异步（AJAX）请求" class="headerlink" title="10. 浏览器发送进一步的异步（AJAX）请求"></a>10. 浏览器发送进一步的异步（AJAX）请求</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dwr9b02nj20jq03awef.jpg" alt="image-20190323215315324"></p>
+<p>本着Web 2.0的精神，即使在呈现页面之后，客户端仍继续与服务器通信。</p>
+<p>例如，Facebook聊天将继续更新您登录的朋友列表。要更新已登录朋友的列表，浏览器中执行的JavaScript必须向服务器发送异步请求。异步请求是以编程方式构造的GET或POST请求，该请求转到特殊URL。在Facebook示例中，客户端向 <a class="link"   target="_blank" rel="noopener" href="http://www.facebook.com/ajax/chat/buddy_list.php" >http://www.facebook.com/ajax/chat/buddy_list.php<i class="fas fa-external-link-alt"></i></a> 发送POST请求以获取您在线的朋友列表。</p>
+<p>这种模式有时被称为“AJAX”，它代表“异步JavaScript和XML”，即使服务器必须将响应格式化为XML也没有特别的原因。例如，Facebook返回JavaScript代码片段以响应异步请求。</p>
+<blockquote>
+<p>除此之外，fiddler工具还允许您查看浏览器发送的异步请求。实际上，您不仅可以被动地观察请求，还可以修改和重新发送它们。事实上，这种易于“欺骗”的AJAX请求会给使用记分板的在线游戏的开发者带来很多麻烦。 （显然，请不要以这种方式作弊。）</p>
+</blockquote>
+<blockquote>
+<p>Facebook聊天提供了一个AJAX有趣问题的例子：将数据从服务器推送到客户端。由于HTTP是请求 - 响应协议，因此聊天服务器无法将新消息推送到客户端。相反，客户端必须每隔几秒轮询服务器以查看是否有任何新消息到达。</p>
+<p>在这些类型的场景中，长轮询是一种减少服务器负载的有趣技术。如果服务器在轮询时没有任何新消息，则它不会发回响应。并且，如果在超时期限内收到此客户端的消息，服务器将找到未完成的请求并返回带有响应的消息。</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>希望这可以让您更好地了解不同的Web部件如何协同工作。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Network/">#Network</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/notes/">#notes</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/translation/">#translation</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/07/29/Understanding-PLONK/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Understanding PLONK</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2019/02/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">计算机网络-自顶向下 前五章重点整理内容</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5"><span class="nav-text">原文链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%93%E4%BD%A0%E8%AE%BF%E9%97%AE%E4%B8%80%E4%B8%AAURL%E7%9A%84%E6%97%B6%E5%80%99%E5%88%B0%E5%BA%95%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-text">当你访问一个URL的时候到底发生了什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%BD%93%E4%BD%A0%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AAURL"><span class="nav-text">1. 当你在浏览器中输入一个URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%9A%E5%AF%BB%E6%89%BE%E8%BF%99%E4%B8%AA%E5%9F%9F%E5%90%8D%E7%9A%84IP%E5%9C%B0%E5%9D%80"><span class="nav-text">2. 浏览器会寻找这个域名的IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%91web%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82"><span class="nav-text">3. 浏览器向web服务器发送HTTP请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Facebook%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%94%E5%9B%9E%E4%BA%86%E4%B8%80%E4%B8%AA%E6%B0%B8%E4%B9%85%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88301%EF%BC%89%E7%9A%84%E5%93%8D%E5%BA%94"><span class="nav-text">4. Facebook服务器返回了一个永久重定向（301）的响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%B5%8F%E8%A7%88%E5%99%A8%E9%81%B5%E5%BE%AA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-text">5. 浏览器遵循重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%9C%8D%E5%8A%A1%E5%99%A8%E2%80%9C%E5%A4%84%E7%90%86%E2%80%9D%E8%AF%B7%E6%B1%82"><span class="nav-text">6. 服务器“处理”请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AAHTML%E5%93%8D%E5%BA%94"><span class="nav-text">7. 服务器返回一个HTML响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%80%E5%A7%8B%E6%B8%B2%E6%9F%93HTML"><span class="nav-text">8. 浏览器开始渲染HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%91%E9%80%81%E5%AF%B9HTML%E4%B8%AD%E5%B5%8C%E5%85%A5%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AF%B7%E6%B1%82"><span class="nav-text">9. 浏览器发送对HTML中嵌入的对象的请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%91%E9%80%81%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E5%BC%82%E6%AD%A5%EF%BC%88AJAX%EF%BC%89%E8%AF%B7%E6%B1%82"><span class="nav-text">10. 浏览器发送进一步的异步（AJAX）请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2016</span> -
+            
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Weihong Wang</a>
+            
+        </div>
+        
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <!-- Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a> -->
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+
+</body>
+</html>

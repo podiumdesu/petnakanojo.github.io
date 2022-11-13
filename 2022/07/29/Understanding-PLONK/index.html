@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Weihong Wang">
+    
+    <title>
+        
+            Understanding PLONK |
+        
+        Welcome
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.ico","avatar":"/images/avatar.png","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Eat with my left hand.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":false,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.5.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Welcome
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">Understanding PLONK</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Weihong Wang</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-07-29 15:39:23</span>
+        <!-- <span class="mobile">2022-07-29 15:39</span> -->
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-11-14 01:15:49</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.7k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>16 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                <p>All the constraint proving systems are designed to compress many constraint checks into one. The general way to obtain such compression is by taking a <strong>random linear combination</strong> of the constraints. The more difficult constraints to be compressed are <strong>linear relations</strong> between the system variables which is Plonk dedicated to solving.</p>
+<p>Firstly, we need to know why we need PLONK and what PLONK works for. </p>
+<h2 id="A-Arithmetic-Circuit-Constraint-System"><a href="#A-Arithmetic-Circuit-Constraint-System" class="headerlink" title="A. Arithmetic Circuit (Constraint System)"></a>A. Arithmetic Circuit (Constraint System)</h2><p><em><strong>Notes: Given a program. convert it into a circuit.</strong></em></p>
+<p>Take another constraint system as an example:</p>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4p1sk2m8yj21hy0qw0x6.jpg" alt="image-20220730164703733" style="zoom: 25%;" />
+
+<p>In this situation, $a_i$ and $b_i$ are the variables (user inputs), besides, $\omega_i$ and $w_i’$ are the weight of each wire which can be used to control the different inputs. </p>
+<p>if we want to represent the simplest addition gate: $a_1 + b_3 &#x3D; output$, we need to set:<br>$$<br>\omega_1 &#x3D; 1, \omega_2 &#x3D; 0, \omega_3 &#x3D; 0, …, \omega_n &#x3D; 0 \<br>\omega_1’ &#x3D; 0, \omega_2’ &#x3D; 0, \omega_3’&#x3D; 1, …, \omega_n’ &#x3D; 0 \<br>$$<br>And if we want to build another gate, we can just link the $left_input$ and the $right_input$ to these variables $a_i$, $b_i$, and use the weight of every wire as the switch.</p>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4rdyamdn9j21ky0u0n1q.jpg" alt="image-20220731000612533" style="zoom:20%;" />
+
+<p>Under such a situation, it is easy to ensure that <strong>the first black</strong> wire and <strong>the first red</strong> wire are the same input.</p>
+<p>Now let us consider a constraint system like this:</p>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4tvwfirmqj20y40u0wgw.jpg" alt="image-20220803211103636" style="zoom:67%;" />
+
+<p>Although in the circuit, we can easily find that $c_1 &#x3D; a_2$, $c_2 &#x3D; a_3$ because they share the same wire. </p>
+<p>In the constraint system of PLONK, the wires connected to each gate are independent, making it possible for malicious provers to connect wires with different values to the gates which expect wires with the same value. To prevent such cases, we need to add some more constraints on the values of wires, which are called <strong>copy constraints</strong>.</p>
+<h2 id="B-Equations-Setup-Gate-Constraints"><a href="#B-Equations-Setup-Gate-Constraints" class="headerlink" title="B. Equations Setup (Gate Constraints)"></a>B. Equations Setup (Gate Constraints)</h2><p><em><strong>NOTES: Convert the variables of the circuits into multiple equations.</strong></em></p>
+<blockquote>
+<p>On the gates and wires, we have two types of constraints: <strong>gate constraints</strong> (equations between wires attached to the same gate, eg. $a_1⋅b_1&#x3D;c_1$) and <strong>copy constraints</strong> (claims about equality of different wires anywhere in the circuit, eg. $a_0&#x3D;a_1&#x3D;b_1&#x3D;b_2&#x3D;a_3$ or $c_0&#x3D;a_1$).</p>
+</blockquote>
+<p>From the circuit, we can generate the list of gate constraints (using the gates) and the list of copy constraints (using the wire). The copy constraints will be converted into the permutation table later (check the permutation between sets of wires). Now we are talking about the gate constraints.</p>
+<p>Firstly, each equation is of the following form. ($L$ &#x3D; Left, $R$ &#x3D; Right, $O$ &#x3D; output, $M$ &#x3D; Multiplication, $C$ &#x3D; Constant). Change the value of $Q$ to toggle on or off.<br>$$<br>Q_{L_i}a_i + Q_{R_i}b_i + Q_{O_i}c_i + Q_{C_i} + Q_{M_i}a_ib_i &#x3D; 0<br>$$<br>For example, </p>
+<table>
+<thead>
+<tr>
+<th>Gate Type</th>
+<th>$Q_{L_i}$</th>
+<th>$Q_{R_i}$</th>
+<th>$Q_{O_i}$</th>
+<th>$Q_{C_i}$</th>
+<th>$Q_{M_i}$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Multiplication</td>
+<td>0</td>
+<td>0</td>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Addition</td>
+<td>1</td>
+<td>1</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Constant (for left value)</td>
+<td>1</td>
+<td>0</td>
+<td>-1</td>
+<td>-x</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>‼️ Extension:</p>
+<p>Here we can do some extensions to the equations. For example, in the case: $a_1 + b_1 + a_1 * b_1 &#x3D; c_1$, $Q_{L_1} &#x3D; 1, Q_{R_1} &#x3D; 1, Q_{C_1} &#x3D; -1, Q_{M_1} &#x3D; 1$. </p>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4twd2coedj20us0lcq49.jpg" alt="image-20220803212657160" style="zoom: 50%;" />
+
+<p>Through this, we can convert all these gates into multiple equations.<br>$$<br>\left{<br>\begin{aligned}<br>a_1 * b_1 &amp;&#x3D; c_1;(Q_{L_1} &#x3D; 0, Q_{R_1} &#x3D; 0, Q_{O_1} &#x3D; -1, Q_{C_1} &#x3D; 0, Q_{M_1} &#x3D; 1)\<br>a_2 + b_2 &amp;&#x3D; c_2;(Q_{L_2} &#x3D; 1, Q_{R_2} &#x3D; 1, Q_{O_2} &#x3D; -1, Q_{C_1} &#x3D; 0, Q_{M_1} &#x3D; 0)\<br>a_3 + b_3 &amp;&#x3D; c_3;(Q_{L_3} &#x3D; 1, Q_{R_3} &#x3D; 1, Q_{O_3} &#x3D; -1, Q_{C_1} &#x3D; 0, Q_{M_1} &#x3D; 0)\<br>a_4 * b_4 &amp;&#x3D; c_4;(Q_{L_4} &#x3D; 0, Q_{R_4} &#x3D; 0, Q_{O_4} &#x3D; -1, Q_{C_1} &#x3D; 0, Q_{M_1} &#x3D; 1)\<br>a_5 + c_5 &amp;&#x3D; c_5;(Q_{L_5} &#x3D; 1, Q_{R_5} &#x3D; 1, Q_{O_5} &#x3D; -1, Q_{C_1} &#x3D; 0, Q_{M_1} &#x3D; 0)\<br>\end{aligned}<br>\right.<br>$$<br>And now we have a bunch of $a_i$, $b_i$ and $c_i$ values.</p>
+<table>
+<thead>
+<tr>
+<th><span style="color: red">x</span></th>
+<th>Gate 1</th>
+<th>Gate 2</th>
+<th>Gate 3</th>
+<th>Gate 4</th>
+<th>…</th>
+<th>Gate n</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><span style="color: red">$a(x)$</span></td>
+<td>$a_1$</td>
+<td>$a_2$</td>
+<td>$a_3$</td>
+<td>$a_4$</td>
+<td></td>
+<td>$a_n$</td>
+</tr>
+<tr>
+<td><span style="color: red">$b(x)$</span></td>
+<td>$b_1$</td>
+<td>$b_2$</td>
+<td>$b_3$</td>
+<td>$b_4$</td>
+<td></td>
+<td>$b_n$</td>
+</tr>
+<tr>
+<td><span style="color: red">$c(x)$</span></td>
+<td>$c_1$</td>
+<td>$c_2$</td>
+<td>$c_3$</td>
+<td>$c_4$</td>
+<td></td>
+<td>$c_n$</td>
+</tr>
+</tbody></table>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4pkuxmfouj213u0dgjt2.jpg" alt="image-20220731034646778" style="zoom:43%;" />
+
+<p>Can we use the sets of values to define the polynomials? </p>
+<h2 id="C-Polynomials-Construction"><a href="#C-Polynomials-Construction" class="headerlink" title="C. Polynomials Construction"></a>C. Polynomials Construction</h2><p><em><strong>Notes: Change the set of equations into a single polynomial equation.</strong></em></p>
+<p>Then we can compute the values of all the wires and convert them into 3 polynomials: $a(x)$, $b(x)$, $c(x)$.</p>
+<p>Typically, there are two forms to represent a polynomial.</p>
+<ul>
+<li>1&#x2F; Evaluation form: degree &lt; 4 polynomials of (-2, 1, 0, 1) at points (0, 1, 2, 3)</li>
+</ul>
+<ul>
+<li>2&#x2F; Coefficient form: $y &#x3D; x^3 - 5x^2 + 7x - 2$ (in some field $F$)</li>
+</ul>
+<p>As shown in the table above, the number means the No. of the gate and every gate has its according inputs and outputs. Take $a$ as the example, it is like “degree &lt; n polynomials of ($a_1$, $a_2$, $a_3$, …, $a_n$) at points (1, 2, 3, …, n)”. </p>
+<blockquote>
+<p>You can change the evaluation form to coefficient form through Lagrange interpolation.</p>
+</blockquote>
+<p>From the calculation, we can get 3 polynomials: $a(x)$, $b(x)$, $c(x)$.</p>
+<p>And for all $x \in F$, (here $F &#x3D; {1, 2, 3, …, n}$ ),<br>$$<br>Q_{L}(x)a(x) + Q_R(x)b(x) + Q_O(x)c(x) + Q_M(x)a(x)b(x) + Q_C(x) &#x3D; 0<br>$$<br>We are still discussing the same equations.</p>
+<p>🌿Extensions about quotient polynomials.</p>
+<p>$f(x) &#x3D; 0, \forall x \in H$, $H &#x3D; {h_1, h_2, …, h_n}$ in $F$</p>
+<p>$f(x) &#x3D; x^3 - 5x^2 + 7x - 2$</p>
+<p>$f(x) &#x3D; (h_1 - x)(h_2 - x)…t(x)$</p>
+<p>The $t(x)$ is the quotient polynomials, and $Z_H(x) &#x3D; (h_1 - x)(h_2 - x)…(h_n - x)$ is the vanishing polynomial for $H$. </p>
+<blockquote>
+<p>$Z_H(x)*t(x) $ will equal zero for all coordinates with the particular domain $H$ that we care about, but not necessarily outside of it.</p>
+</blockquote>
+<p>If the polynomial $f(x)$ is 0 from $x &#x3D; 1$ to $n$, then it can be divisible by $Z_H(x)$.</p>
+<p>Then we can change the equation to:<br>$$<br>Q_{L}(x)a(x) + Q_R(x)b(x) + Q_O(x)c(x) + Q_M(x)a(x)b(x) + Q_C(x) &#x3D; Z_H(x)t(x)<br>$$<br>where $Z_H(x) &#x3D; (x-0)(x-1)(x-2)…(x-(n-1))$  (here we start from 0 to $n-1$)</p>
+<h2 id="D-Permutation-Argument-Copy-Constraints"><a href="#D-Permutation-Argument-Copy-Constraints" class="headerlink" title="D. Permutation Argument (Copy Constraints)"></a>D. Permutation Argument (Copy Constraints)</h2><p><em><strong>Notes: How to ensure the equation relations between wires?</strong></em></p>
+<p>Here is the <em>constraint system</em>:<br>$$<br>\left{<br>\begin{aligned}<br>a_1 * b_1 - c_1 &amp;&#x3D; 0\<br>a_2 + b_2 - c_2 &amp;&#x3D; 0\<br>a_3 + b_3 - c_3 &amp;&#x3D; 0\<br>a_4 * b_4 - c_4 &amp;&#x3D; 0\<br>a_5 + b_5 - c_5 &amp;&#x3D; 0\<br>\end{aligned}<br>\right.<br>$$<br><del>Here we skipped the basic permutation in one polynomial.</del></p>
+<p>In the $Plonk$ protocol, it checks a permutation <strong>“across”</strong> the values of several polynomials.</p>
+<ol>
+<li><p>Give each variable a unique index. </p>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4q9fb85suj20hq0bo3yx.jpg" alt="image-20220731175644657" style="zoom:40%;" />
+
+<p>The X coordinates would be slices of a permutation across all three sets. </p>
+<blockquote>
+<p> In the definition of the paper, suppose we have multiple polynomials $f_1$, …, $f_k$ $\in$ $F_{&lt;d}[X]$ and a permutation $\sigma$: $[kn] \rightarrow [kn]$. … We also have $g_{(l)} &#x3D; f_{(\sigma(l))}$</p>
+</blockquote>
+<p>For each $j \in [k]$, $i \in [n]$, $S_{ID_j}(x) &#x3D; S_{ID}(x) + (j - 1) \cdot  n$. In our problem,  $k$ means the number of the polynomials (it is 3 in our problem). $n$ means the number of gates (it is 5 in our problem).</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+</tr>
+</thead>
+</table>
+</li>
+<li><p>Using the copy constraints to construct the permutation table.<br>$$<br>\left{<br>\begin{aligned}<br>a_2 &#x3D; c_1\<br>a_3 &#x3D; c_2\<br>a_5 &#x3D; c_4\<br>b_5 &#x3D; c_3\<br>\end{aligned}<br>\right.<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\sigma(X)$</td>
+<td>1</td>
+<td><span style="background-color:purple;color:white"> 11 </span></td>
+<td><span style="background-color:orange;color:white"> 12 </span></td>
+<td>4</td>
+<td><span style="background-color:blue;color:white"> 14 </span></td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td><span style="background-color:brown;color:white"> 13 </span></td>
+<td><span style="background-color:purple;color:white"> 2 </span></td>
+<td><span style="background-color:orange;color:white"> 3 </span></td>
+<td><span style="background-color:brown;color:white"> 10 </span></td>
+<td><span style="background-color:blue;color:white"> 5 </span></td>
+<td>15</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Calculate $f_j’ :&#x3D; f_j + \beta \cdot  S_{ID_j} + \gamma$ , $g_j’ :&#x3D; g_j + \beta \cdot  S_{\sigma_j} + \gamma$</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$f_1’(X)$</td>
+<td>$a_1 + \beta\cdot 1+\gamma$</td>
+<td>$a_2 + \beta \cdot  2 + \gamma$</td>
+<td>$a_3 + \beta \cdot 3 + \gamma$</td>
+<td>$a_4 + \beta \cdot  4 + \gamma$</td>
+<td>$a_5 + \beta \cdot  5 + \gamma$</td>
+</tr>
+<tr>
+<td>$f_2’(X)$</td>
+<td>$b_1 + \beta \cdot  5 + \gamma$</td>
+<td>$b_2 + \beta \cdot  6 + \gamma$</td>
+<td>$b_3 + \beta \cdot  8 + \gamma$</td>
+<td>$b_4 + \beta \cdot  9 + \gamma$</td>
+<td>$b_5 + \beta \cdot  10 + \gamma$</td>
+</tr>
+<tr>
+<td>$f_3’(X)$</td>
+<td><span style="background-color:purple;color:white"> $c_1 + \beta \cdot  11 + \gamma$ </span></td>
+<td><span style="background-color:orange;color:white">$c_2 + \beta \cdot  12 + \gamma$ </span></td>
+<td><span style="background-color:brown;color:white">$c_3 + \beta \cdot  13 + \gamma$ </span></td>
+<td><span style="background-color:blue;color:white">$c_4 + \beta \cdot  14 + \gamma$ </span></td>
+<td>$c_5 + \beta \cdot  15 + \gamma$</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$g_1’(X)$</td>
+<td>$a_1 + \beta\cdot 1+\gamma$</td>
+<td><span style="background-color:purple;color:white">$c_1 + \beta \cdot  11 + \gamma$ </span></td>
+<td><span style="background-color:orange;color:white"> $c_2 + \beta \cdot 12 + \gamma$ </span></td>
+<td>$a_4 + \beta \cdot  4 + \gamma$</td>
+<td><span style="background-color:blue;color:white"> $c_4 + \beta \cdot  14 + \gamma$</span></td>
+</tr>
+<tr>
+<td>$g_2’(X)$</td>
+<td>$b_1 + \beta \cdot  5 + \gamma$</td>
+<td>$b_2 + \beta \cdot  6 + \gamma$</td>
+<td>$b_3 + \beta \cdot  8 + \gamma$</td>
+<td>$b_4 + \beta \cdot  9 + \gamma$</td>
+<td><span style="background-color:brown;color:white">$c_3 + \beta \cdot  13 + \gamma$ </span></td>
+</tr>
+<tr>
+<td>$g_3’(X)$</td>
+<td>$a_2 + \beta \cdot  2 + \gamma$</td>
+<td>$a_3 + \beta \cdot  3 + \gamma$</td>
+<td>$b_5 + \beta \cdot  10 + \gamma$</td>
+<td>$a_5 + \beta \cdot  5 + \gamma$</td>
+<td>$c_5 + \beta \cdot  15 + \gamma$</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>As defined in the paper:</p>
+<ul>
+<li><p>Define $f’$, $g’$ $\in$ $F_{&lt;kn}[X]$ by<br>$$<br>f’(X) :&#x3D; \prod_{j\in[k]}f_j’(X), g’(X) :&#x3D; \prod_{j\in[k]}g_j’(X),<br>$$</p>
+</li>
+<li><p>$Z \in F_{&lt;n}[X]$, such that $Z(g) &#x3D; 1$; and for $i \in {2,…,n}$<br>$$<br>Z(g^i) &#x3D; \prod_{1\leq j &lt; i}f’(g^j) &#x2F; g’(g^j)<br>$$<br>Tips: In the actual calculation, we are using the group. Need to replace the X (1, 2, 3, 4, …, n) with (1, $\omega$, $\omega^2$, $\omega^3$, …, $\omega^{n-1}$). Simultaneously, use $\omega^i$,  $g * \omega^i$ , $g^2 * \omega^i$.</p>
+</li>
+</ul>
+</li>
+<li><p>The final check by verifier for all $a \in H$: </p>
+<ul>
+<li><p>$L_1(a)(Z(a) - 1) &#x3D; 0$</p>
+<blockquote>
+<p>$L_1(a)$ is the <em>Lagrange basis</em>. Definition: If $a &#x3D; g^i$, $L_i(a) &#x3D; 1$, otherwise, $L_i(a) &#x3D; 0$. <strong>$L_i$ reduce point checks to range checks.</strong></p>
+</blockquote>
+<p>Here, actually, the verifier is checking whether $Z(g) &#x3D; 1$</p>
+</li>
+<li><p>$Z(a)f’(a) &#x3D; g’(a)Z(a \cdot g)$</p>
+<blockquote>
+<p>A related convenience is that multiplicative subgroups interact well with Lagrange bases. When $a &#x3D; g^n$, $a \cdot g &#x3D; g^{n+1} &#x3D; g$. We are back to the beginning!</p>
+</blockquote>
+<p>Here, if $a \neq g^n$, clearly, the equation is established according to the definition of $Z(g^i)$, $f’(X)$ and $g’(X)$. And if $a &#x3D; g^n$,<br>$$<br>\begin{aligned}<br>Z(a) &#x3D; Z(g^n) &#x3D; \prod_{1\leq j &lt; n}f’(g^j)&#x2F;g’(g^j) &amp;&#x3D; \frac{f’(g^1)f’(g^2)…f’(g^{n-1})}{g’(g^1)g’(g^2)…g’(g^{n-1})}\<br>Z(a\cdot g) &#x3D; Z(g^{n+1}) &#x3D; Z(g) &amp;&#x3D; 1\<br>\frac{Z(a)}{Z(a\cdot g)} \cdot \frac{f’(a)}{g’(a)} &amp;&#x3D; 1\<br>\frac{f’(g^1)f’(g^2)…f’(g^{n-1})}{g’(g^1)g’(g^2)…g’(g^{n-1})} \cdot \frac{f’(g^n)}{g’(g^n)} &amp;&#x3D; 1\<br>\end{aligned}<br>$$<br>This is to check whether the product of every value is the same after permutation.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>‼️ Question: </p>
+<ol>
+<li><p>why we need the $\beta$ and the $\gamma$ ?</p>
+<p>Prevent the prover cheating. And the value of $\beta$ and $\gamma$ can only be revealed after the prover has finished the commitment of $a(x)$, $b(x)$, $c(x)$. And $\beta$ and $\gamma$ usually generate from the hashes of commitments to $a(x)$, $b(x)$ and $c(x)$.</p>
+</li>
+</ol>
+<h2 id="E-Polynomial-Commitments-Scheme"><a href="#E-Polynomial-Commitments-Scheme" class="headerlink" title="E. Polynomial Commitments Scheme"></a>E. Polynomial Commitments Scheme</h2><p><em><strong>Notes: There is a set of equations between the polynomials that need to be checked. Do this by making commitments to the polynomials, opening them at some random $z$.</strong></em></p>
+<p>Now we have these three types of polynomials: wire assignments  $a(x)$, $b(x)$, $c(x)$, coordinate accumulators $P_a(x)$, $P_b(x)$, $P_c(x)$, $P_a’(x)$, $P_b’(x)$ , $P_c’(x)$, and the according quotients. $H_1(x)$, $H_2(x)$, … , $H_6(x)$.<br>$$<br>\textcolor{red}{f(x)} &#x3D; Q_{L}(x)\textcolor{red}{a(x)} + Q_R(x)\textcolor{red}{b(x)} + Q_O(x)\textcolor{red}{c(x)} + Q_M(x)\textcolor{red}{a(x)b(x)} + Q_C(x) &#x3D; Z_H(x) \textcolor{red}{t(x)}<br>$$<br>The black polynomials are known to all, and the red polynomials are only known to prover $P$. If $P$ wants to prove that he knows what the red polynomials are, he needs to give the correct equation $f(z) &#x3D; Z_H(z) \cdot t(z)$ at any random $z$. </p>
+<h3 id="1-x2F-Verifier-directly-sends-the-z"><a href="#1-x2F-Verifier-directly-sends-the-z" class="headerlink" title="1&#x2F; Verifier directly sends the $z$"></a>1&#x2F; Verifier directly sends the $z$</h3><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4rjd1a90aj20cw0bi74g.jpg" alt="image-20220801202605260" style="zoom:50%;" />
+
+<p>In this situation, $V$ selects “$z$”. And $P$ needs to prove that $f(z) &#x3D; Z_H(z)\cdot t(z)$. $P$ can easily cheat, for example, $f(z) &#x3D; t(z) &#x3D; 0$. There is no restriction that $P$ uses those $Q_i(x)$ gates.</p>
+<h3 id="2-x2F-P-sends-the-values-of-the-polynomial"><a href="#2-x2F-P-sends-the-values-of-the-polynomial" class="headerlink" title="2&#x2F;  $P$ sends the values of the polynomial"></a>2&#x2F;  $P$ sends the values of the polynomial</h3><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4rjtwjkimj20j20dydg5.jpg" alt="image-20220801204219976" style="zoom:50%;" />
+
+<p>Since $V$ knows the circuit and the gate values (the black polynomials), instead of sending $f(z)$, $P$ sends $a(z)$, $b(z)$, $c(z)$, $t(z)$. And then $V$ checks:<br>$$<br>Q_{L}(z)a(z) + Q_R(z)b(z) + Q_O(z)c(z) + Q_M(z)a(z)b(z) + Q_C(z) &#x3D; Z_H(z)t(z)<br>$$<br>It will be valid for all the $z$ in the field. But the prover can still cheat because $P$ knows $z$ before giving the value of $a(z)$, $b(z)$, $c(z)$, $t(z)$. $P$ can just construct corresponding values to satisfy the requirements of the equation.</p>
+<h3 id="3-x2F-Force-P-to-make-commitments-Kate-Polynomial-Commitments-Scheme"><a href="#3-x2F-Force-P-to-make-commitments-Kate-Polynomial-Commitments-Scheme" class="headerlink" title="3&#x2F; Force $P$ to make commitments (Kate Polynomial Commitments Scheme)"></a>3&#x2F; Force $P$ to make commitments (Kate Polynomial Commitments Scheme)</h3><p>Kate PCS is a paring-based PCS. It can create very short proofs. But it requires <strong>trusted setup</strong>. </p>
+<p>Through the <strong>structured reference string</strong>, we will generate a bunch of points that need to keep smt secret. </p>
+<p>Let us consider the coefficient form of $f(x)$: $f(x) &#x3D; f_0 + f_1 x + f_2 x^2 + … + f_n x ^n$.</p>
+<p>$z$, $f(z)$, $\pi$</p>
+<h4 id="a-SETUP"><a href="#a-SETUP" class="headerlink" title="a) SETUP"></a>a) SETUP</h4><ol>
+<li><p>Select a random $s$ from the field $F$, and there is an elliptic group of order $p$ and $G$ is the generator.</p>
+</li>
+<li><p>Generate a set of elliptic curve points: ${G, [s]G, [s^2]G, ……}$. (The $[s]$ symbol means $s$ is unknown to everyone and remains secret. )</p>
+<p>For reading convenience, we use ${T_0, T_1, T_2, …}$ to represent  ${G, [s]G, [s^2]G^2, …}$.</p>
+<p>$s$ is a secret that is forgotten once the procedure is finished.</p>
+<p>Anyone who needs to make a polynomial commitment will need to use these points.</p>
+</li>
+</ol>
+<h4 id="b-COMMIT"><a href="#b-COMMIT" class="headerlink" title="b) COMMIT"></a>b) COMMIT</h4><p>A commitment to a degree-d polynomial is made by multiplying each of the first d+1 points in the proving key by the corresponding coefficient in the polynomial, and adding the results together.<br>$$<br>\begin{aligned}<br>f(s) \cdot G &amp;&#x3D; [f_0]T_0 + [f_1]T_1 + [f_2]T_2 + … \<br>&amp;&#x3D; [f_0]G + [f_1][s]G + [f_2][s^2]G + …\<br>&amp;&#x3D; [f_0 + f_1s + f_2s^2 + …]G\<br>\end{aligned}<br>$$<br>$[f_0 + f_1s + f_2s^2 + …]$ is the evaluation of $f(s)$.</p>
+<h4 id="c-EVALUATION-PROOF"><a href="#c-EVALUATION-PROOF" class="headerlink" title="c) EVALUATION PROOF"></a>c) EVALUATION PROOF</h4><blockquote>
+<p>Given $z$ and $com(f)$, $P$ needs to compute $f(z)$, $V$ then checks whether $f(z)$ is the honest answer.</p>
+</blockquote>
+<p>$$<br>f(x) - f(z) &#x3D; (x - z)t(x)<br>$$</p>
+<p>$P$ sends $com(t(s))$ to $V$.<br>$$<br>\begin{aligned}<br>\textcolor{green}{com(f(s))} &amp;&#x3D; [f_0 + f_1s + f_2s^2 + …]\cdot G\<br>\textcolor{orange}{com(t(s))} &amp;&#x3D; [t_0 + t_1s+ t_2s^2 + …]\cdot G\<br>com(f(z)) &amp;&#x3D; f(z) \cdot G\<br>\<br>com(f(s)) - com(f(z)) &amp;&#x3D; com(f(s) - f(z))\<br>&amp;&#x3D; com((s - z)\cdot t(s))\<br>&amp;&#x3D; com(s-z) \cdot com(t(s)) \ \</p>
+<p>\textcolor{green}{com(f(s))} - com(f(z)) &amp;&#x3D; \textcolor{pink}{com(s-z)} \cdot \textcolor{orange}{com(t(s))}<br>\end{aligned}<br>$$<br>$com(s-z)$ is in group $G_2$.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4uifw7587j213e02gt8w.jpg" alt="image-20220804101057224"></p>
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h4rjy0yf0wj20pe0k6my8.jpg" alt="image-20220801204617548" style="zoom: 45%;" />
+
+<h2 id="F-Optimization-in-Plonk"><a href="#F-Optimization-in-Plonk" class="headerlink" title="F. Optimization in $Plonk$"></a>F. Optimization in $Plonk$</h2><p><em><strong>Notes: Integrate multiple polynomials</strong></em></p>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/11/14/Securing-Smart-Contract-with-Runtime-Validation/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Securing Smart Contract with Runtime Validation</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2019/03/23/%E3%80%90%E7%BF%BB%E8%AF%91%E3%80%91%E5%BD%93%E4%BD%A0%E8%AE%BF%E9%97%AE%E4%B8%80%E4%B8%AAURL%E6%97%B6%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【翻译】当你访问一个URL的时候到底发生了什么</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Arithmetic-Circuit-Constraint-System"><span class="nav-text">A. Arithmetic Circuit (Constraint System)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#B-Equations-Setup-Gate-Constraints"><span class="nav-text">B. Equations Setup (Gate Constraints)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Polynomials-Construction"><span class="nav-text">C. Polynomials Construction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#D-Permutation-Argument-Copy-Constraints"><span class="nav-text">D. Permutation Argument (Copy Constraints)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E-Polynomial-Commitments-Scheme"><span class="nav-text">E. Polynomial Commitments Scheme</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-x2F-Verifier-directly-sends-the-z"><span class="nav-text">1&#x2F; Verifier directly sends the $z$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-x2F-P-sends-the-values-of-the-polynomial"><span class="nav-text">2&#x2F;  $P$ sends the values of the polynomial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-x2F-Force-P-to-make-commitments-Kate-Polynomial-Commitments-Scheme"><span class="nav-text">3&#x2F; Force $P$ to make commitments (Kate Polynomial Commitments Scheme)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-SETUP"><span class="nav-text">a) SETUP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-COMMIT"><span class="nav-text">b) COMMIT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c-EVALUATION-PROOF"><span class="nav-text">c) EVALUATION PROOF</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-Optimization-in-Plonk"><span class="nav-text">F. Optimization in $Plonk$</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2016</span> -
+            
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Weihong Wang</a>
+            
+        </div>
+        
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <!-- Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a> -->
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Weihong Wang">
+    
+    <title>
+        
+            MacTex配置fontawesome |
+        
+        Welcome
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.ico","avatar":"/images/avatar.png","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Eat with my left hand.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":false,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":false},"version":"3.5.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Welcome
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">MacTex配置fontawesome</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Weihong Wang</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2017-05-23 08:40:57</span>
+        <!-- <span class="mobile">2017-05-23 08:40</span> -->
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-05-19 19:17:09</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.2k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                <p>最近报名了一个hackinit()的活动，然后需要写一份简历，去github上捞了一波模版，然而对于一个从来没用过latex的小白来说，最麻烦的怕不就是本地环境的搭建了w</p>
+<p>所以这篇博客大概是讲一点点简单的安装方法</p>
+<span id="more"></span>
+
+<p>捞的resume模版<a class="link"   target="_blank" rel="noopener" href="https://github.com/dyinnz/uniquecv" >在这里！<i class="fas fa-external-link-alt"></i></a>，是联创前队长写的一份uniquecv。</p>
+<p>下面开始配置：</p>
+<h3 id="安装MacTex"><a href="#安装MacTex" class="headerlink" title="安装MacTex"></a>安装MacTex</h3><p>听很多人说这个软件是mac下比较好用的latex工具，所以就下载了，对于没接触过latex的小白来说，直接点击下载那个完整版，就是2.7G的那个文件</p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://www.tug.org/mactex/downloading.html" >这里是下载链接<i class="fas fa-external-link-alt"></i></a></p>
+<h4 id="打开以后会得到一大堆的东西"><a href="#打开以后会得到一大堆的东西" class="headerlink" title="打开以后会得到一大堆的东西"></a>打开以后会得到一大堆的东西</h4><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dxi21icwj212y08cjs7.jpg">
+
+
+<h3 id="打开taxshop"><a href="#打开taxshop" class="headerlink" title="打开taxshop"></a>打开taxshop</h3><p>之后的编译等等都是在这个软件下进行的。具体的latex语法什么的就不细说了。</p>
+<h3 id="配置中文"><a href="#配置中文" class="headerlink" title="配置中文"></a>配置中文</h3><ol>
+<li><p>左上角将latex选为xelatex</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dxi489w2j20wk0hkq55.jpg" alt="更改xelatex"></p>
+</li>
+<li><p>打开texshop的「偏好设置」将「字符编码」改为<code>utf-8</code>，记得保存文件的时候也看一下是否是以<code>utf-8</code>编码的哦w</p>
+</li>
+<li><p>前往系统的「应用软件」-&gt;「字体集」，查看你需要的是什么字体。<br>  如图上所示：Songti SC</p>
+</li>
+</ol>
+<p>  <img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dxi6phopj21cw0pcahp.jpg" alt="Songtisc"></p>
+<ol start="4">
+<li>测试一下w：<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[nofonts]&#123;ctexart&#125;</span><br><span class="line"><span class="keyword">\setCJKmainfont</span>[BoldFont=STHeiti, ItalicFont=STKaiti]&#123;STSong&#125;</span><br><span class="line"><span class="keyword">\setCJKsansfont</span>[BoldFont=STHeiti]&#123;STXihei&#125;</span><br><span class="line"><span class="keyword">\setCJKmonofont</span>&#123;STFangsong&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">汉字ddd</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>此时应该就可以显示出中文啦</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dxi8wvarj213q0no0tl.jpg" alt="zhongwen.jpg"></p>
+<h3 id="配置fontawesome"><a href="#配置fontawesome" class="headerlink" title="配置fontawesome"></a>配置fontawesome</h3><blockquote>
+<p>fontawesome是什么？</p>
+</blockquote>
+<p>Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供的所有特性对它们进行更改，包括：大小、颜色、阴影或者其它任何支持的效果。</p>
+<p>这个也是一样的，去<a class="link"   target="_blank" rel="noopener" href="http://fontawesome.io/" >fontawesome官网<i class="fas fa-external-link-alt"></i></a>下载fontawesome压缩包</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dxicav5pj215z0u0q8a.jpg" alt="fontawesome"></p>
+<p>之后就可以愉快地使用这个uniquecv啦hhhhh，反正我就这样配，然后搞定了，虽然搞了两节课orz。</p>
+<p>测试一下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;uniquecv&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;fontawesome&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\name</span>&#123;名字&#125;</span><br><span class="line"><span class="keyword">\medskip</span></span><br><span class="line"><span class="keyword">\basicinfo</span>&#123;</span><br><span class="line">  <span class="keyword">\faPhone</span> ~ (+86) 153-0000-8888</span><br><span class="line">  <span class="keyword">\textperiodcentered</span><span class="keyword">\</span></span><br><span class="line"><span class="keyword"></span>  <span class="keyword">\faEnvelope</span> ~ username@email.com</span><br><span class="line">  <span class="keyword">\textperiodcentered</span><span class="keyword">\</span></span><br><span class="line"><span class="keyword"></span>  <span class="keyword">\faGithub</span> ~ github.com/username</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\section</span>&#123;教育背景&#125;</span><br><span class="line"><span class="keyword">\dateditem</span>&#123;<span class="keyword">\textbf</span>&#123;华中科技大学&#125; <span class="keyword">\quad</span> 软件工程 <span class="keyword">\quad</span> 本科&#125;&#123;2014年 -- 2018年&#125;</span><br><span class="line">成绩：年级前100<span class="keyword">\%</span> <span class="keyword">\quad</span> 英语：CET6</span><br><span class="line"></span><br><span class="line"><span class="keyword">\section</span>&#123;专业技能&#125;</span><br><span class="line"><span class="keyword">\smallskip</span></span><br><span class="line">C/C++、Lisp、Java、算法与数据结构、Linux、Storm、Hadoop、Spark、Flink、Hive、Hbase</span><br><span class="line"></span><br><span class="line"><span class="keyword">\section</span>&#123;获奖情况&#125;</span><br><span class="line"><span class="keyword">\datedaward</span>&#123;一等奖&#125;&#123;XYZ应用开发大赛&#125; &#123;2026年06月&#125;</span><br><span class="line"><span class="keyword">\datedaward</span>&#123;<span class="keyword">\small</span>&#123;这是一个比较长长长长的奖&#125;&#125;&#123;比较长的奖的比赛&#125;&#123;2016年04月&#125;</span><br><span class="line"><span class="keyword">\datedaward</span>&#123;冠军&#125;&#123;武汉KK编程挑战赛&#125; &#123;2015年09月&#125;</span><br><span class="line"><span class="keyword">\medskip</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">\section</span>&#123;项目经历&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">\datedproject</span>&#123;分布式流体计算项目&#125;&#123;竞赛项目&#125;&#123;2016年05月 -- 2016年06月&#125;</span><br><span class="line"><span class="keyword">\textit</span>&#123;性能优化、并行计算&#125;</span><br><span class="line"><span class="keyword">\vspace</span>&#123;0.4ex&#125;</span><br><span class="line"></span><br><span class="line">将一个单机的流体计算程序移植到多机平台</span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> 计算节点内部使用OpenMP并行化</span><br><span class="line">  <span class="keyword">\item</span> 计算节点间使用MPI并行化</span><br><span class="line">  <span class="keyword">\item</span> 单机优化性能达2x, 多机接近线性加速比</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">\datedproject</span>&#123;这是一个测试项目&#125;&#123;导师项目&#125;&#123;2016年02月 -- 2016年04月&#125;</span><br><span class="line"><span class="keyword">\textit</span>&#123;编译技术、C++&#125;</span><br><span class="line"><span class="keyword">\vspace</span>&#123;0.4ex&#125;</span><br><span class="line"></span><br><span class="line">这是一个没有分点陈述的项目，如果没有分点陈述，LaTeX的排版会是什么样子？</span><br><span class="line">这是一个没有分点陈述的项目，如果没有分点陈述，LaTeX的排版会是什么样子？</span><br><span class="line">这是一个没有分点陈述的项目，如果没有分点陈述，LaTeX的排版会是什么样子？</span><br><span class="line">这是一个没有分点陈述的项目，如果没有分点陈述，LaTeX的排版会是什么样子？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">\datedproject</span>&#123;C-Compiler&#125;&#123;个人项目&#125;&#123;2016年02月 -- 2016年04月&#125;</span><br><span class="line"><span class="keyword">\textit</span>&#123;编译技术、C++&#125;</span><br><span class="line"><span class="keyword">\vspace</span>&#123;0.4ex&#125;</span><br><span class="line"></span><br><span class="line">使用C++实现了一个简单C语言编译器，支持生成到目标代码。</span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> 支持C11标准大部分标准</span><br><span class="line">  <span class="keyword">\item</span> 实现了类似lex/flex的词法解析器生成工具</span><br><span class="line">  <span class="keyword">\item</span> 实现了类似yacc/bison的语法解析器生成工具</span><br><span class="line">  <span class="keyword">\item</span> 后端部分采用窥孔优化</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">\section</span>&#123;课外&#125;</span><br><span class="line"><span class="keyword">\dateditem</span>&#123;<span class="keyword">\textbf</span>&#123;华中科技大学XX团队&#125;&#125;&#123;2016年06月 -- 至今&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终效果如图：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2dxig0e3lj20u00xqtfa.jpg" alt="resumedemo"></p>
+<h3 id="嘻嘻"><a href="#嘻嘻" class="headerlink" title="嘻嘻"></a>嘻嘻</h3><p>这样就结束啦，毕竟mactex真的是对小白非常友好，目前就这样就可以啦w</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>咦，虽然最后是写好了自己的简历，但是这份简历真的是简陋的可以，之后还是继续慢慢充实一下自己吧w</p>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2017/05/29/poker%E5%88%9D%E9%85%8Dmac%E9%94%AE%E4%BD%8D/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【ikbc】poker初配mac键位</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85MacTex"><span class="nav-text">安装MacTex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E4%BB%A5%E5%90%8E%E4%BC%9A%E5%BE%97%E5%88%B0%E4%B8%80%E5%A4%A7%E5%A0%86%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="nav-text">打开以后会得到一大堆的东西</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80taxshop"><span class="nav-text">打开taxshop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87"><span class="nav-text">配置中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEfontawesome"><span class="nav-text">配置fontawesome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%98%BB%E5%98%BB"><span class="nav-text">嘻嘻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-text">后记</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2016</span> -
+            
+            2022
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Weihong Wang</a>
+            
+        </div>
+        
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <!-- Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a> -->
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+
+</body>
+</html>
